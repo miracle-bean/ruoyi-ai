@@ -24,7 +24,7 @@ public class VectorStoreFactory {
     }
 
     public VectorStore getVectorStore(String kid){
-        String vectorModel = "weaviate";
+        String vectorModel = "milvus";
         if (StrUtil.isNotEmpty(kid)) {
             KnowledgeInfoVo knowledgeInfoVo = knowledgeInfoMapper.selectVoById(Long.valueOf(kid));
             if (knowledgeInfoVo != null && StrUtil.isNotEmpty(knowledgeInfoVo.getVector())) {
